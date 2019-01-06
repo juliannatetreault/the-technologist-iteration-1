@@ -1,4 +1,8 @@
 class UsersController < ApplicationController.rb
+    
+    def index 
+    end
+    
     def new 
     end 
 
