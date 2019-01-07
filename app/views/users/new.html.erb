@@ -1,7 +1,7 @@
 <h1>Welcome, technologist!</h1>
 <h2>For the lastest tech reviews, please create an account:</h2>
 
-<%= form_for @user do |f| %>
+<%= form_for(@user) do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
   <br />
@@ -19,4 +19,7 @@
 
   <%= f.submit "Sign Up" %>
 <% end %>
+
+<br />
+<%= link_to "Sign In with Github", "/auth/github" %>
 
