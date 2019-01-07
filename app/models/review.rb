@@ -5,7 +5,8 @@ class Review < ApplicationRecord
     validates :content, presence: true 
     validates :content, length: { minimum: 250 }
 
-    self.most_recent
-      Review.all.order(created_at: :desc)
-    end
+    #self.most_recent
+    #  Review.all.order(created_at: :desc)
+    #end
+  #end
 end
