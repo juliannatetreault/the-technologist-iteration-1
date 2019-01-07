@@ -2,15 +2,14 @@
 
 <p><%= @review.content %></p>
 
-<h2>Add a Comment:</h2><br />
-<%= form_for(@comment) do |f| %>
-  <%= f.hidden_field :review_id, value: @review.id %><br />
+<!-- <h2>Add a Comment:</h2><br />
+<%= form_for @comment do |f| %>
+  <%= f.hidden_field :review_id %>
 
   <%= f.label :content %>
   <%= f.text_field :content %><br />
 
-  <%= f.submit "Comment" %><br />
-  <% end %>
+  <%= f.submit "Comment" %> -->
 
 <h2>Review Comments:</h2><br />
 <ul>
@@ -19,5 +18,5 @@
 <% end %>
 </ul>
 
-<%= link_to "All Reviews", reviews_path %>
-<%= link_to "Edit Review", edit_review_path %>
+<%= link_to "All Reviews", reviews_path %> 
+<%= link_to "Edit Review", edit_review_path %> 

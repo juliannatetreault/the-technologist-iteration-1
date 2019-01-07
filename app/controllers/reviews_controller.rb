@@ -1,9 +1,11 @@
 class ReviewsController < ApplicationController
+  
     def index 
       if logged_in?
         @reviews = current_user.reviews
       else 
         @reviews = Review.most_recent
+      end
     end
 
     def show
