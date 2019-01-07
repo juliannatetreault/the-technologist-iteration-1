@@ -1,0 +1,9 @@
+<h1>Welcome fellow technologist, <%= current_user.username.capitalize %>!</h1><br />
+<h2>Your tech reviews are as follows:</h2>
+
+<% @user.reviews.each do |review| %>
+  <h2><%= review.title.capitalize %></h2><br />
+  <p><%= review.content %></p>
+<% end %>
+
+<h3><%= link_to "New Review", new_review_path %></h3>
