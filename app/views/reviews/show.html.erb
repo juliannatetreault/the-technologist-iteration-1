@@ -1,0 +1,23 @@
+<h1><%= @review.title %></h1>
+
+<p><%= @review.content %></p>
+
+<h2>Add a Comment:</h2><br />
+<%= form_for(@comment) do |f| %>
+  <%= f.hidden_field :review_id, value: @review.id %><br />
+
+  <%= f.label :content %>
+  <%= f.text_field :content %><br />
+
+  <%= f.submit "Comment" %><br />
+  <% end %>
+
+<h2>Review Comments:</h2><br />
+<ul>
+<%= @review.comments.each do |comment| %>
+  <li><%= comment.content %> - <%= comment.user.username %></li>
+<% end %>
+</ul>
+
+<%= link_to "All Reviews", reviews_path %>
+<%= link_to "Edit Review", edit_review_path %>
